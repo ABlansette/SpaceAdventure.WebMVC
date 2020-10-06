@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SpaceAdventure.Models.Adventurer.AdventurerListItems>
+
+
+@{
+    ViewBag.Title = "ChooseList";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdventurerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdventurerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.ActionLink("Choose", "../Home/Play", new { /* id=item.PrimaryKey */ }) |
+            </td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Settings", "../Home/Settings")

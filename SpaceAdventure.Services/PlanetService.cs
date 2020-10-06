@@ -76,7 +76,6 @@ namespace SpaceAdventure.Services
                     PlanetaryName = projectEntity.PlanetaryName,
                     PlanetId = projectEntity.PlanetId,
                     NumOfBadGuys = projectEntity.NumOfBadGuys,
-
                 };
             }
         }

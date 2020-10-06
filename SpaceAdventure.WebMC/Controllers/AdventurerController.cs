@@ -44,8 +44,8 @@ namespace SpaceAdventure.MVC.Controllers
 
             if (service.CreateAdventurer(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
-                return RedirectToAction("Index");
+                TempData["SaveResult"] = "Your Adventurer was created.";
+                return RedirectToAction($"List");
             };
 
             ModelState.AddModelError("", "Note could not be created.");
@@ -57,6 +57,15 @@ namespace SpaceAdventure.MVC.Controllers
         {
             var svc = CreateAdventurerService();
             var model = svc.GetAdventurerById(id);
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            var svc = CreateAdventurerService();
+            var model = svc.GetAdventurers();
 
             return View(model);
         }
@@ -85,12 +94,14 @@ namespace SpaceAdventure.MVC.Controllers
             if (service.UpdateAdventurer(model))
             {
                 TempData["SaveResult"] = "Your Adventurer was updated.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
             }
 
             ModelState.AddModelError("", "Your Adventurer was not updated");
             return View(model);
         }
+        [HttpGet]
+        
 
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -45,7 +45,7 @@ namespace SpaceAdventure.MVC.Controllers
             if (service.BadGuyCreate(model))
             {
                 TempData["SaveResult"] = "Your Bad Guy was created.";
-                return RedirectToAction("Index");
+                return RedirectToAction("List");
             };
 
             ModelState.AddModelError("", "Your Bad Guy could not be created.");
@@ -107,6 +107,15 @@ namespace SpaceAdventure.MVC.Controllers
             TempData["SaveResult"] = "Your Bad Guy was not deleted.";
             return RedirectToAction("Index");
 
+        }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            var svc = CreateBadGuyService();
+            var model = svc.GetBadGuys();
+
+            return View(model);
         }
     }
 }

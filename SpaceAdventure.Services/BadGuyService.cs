@@ -31,28 +31,31 @@ namespace SpaceAdventure.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<BadGuyListItems> GetBadGuys()
+        public List<BadGuyListItems> GetBadGuys()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var collection = new List<BadGuyListItems>();
-                foreach (var item in ctx.BadGuys)
-                {
-                    if (_ownerId == item.UserId)
-                    {
-                        var newBadGuyListItems = new BadGuyListItems
-                        {
-                            BadGuyId = item.BadGuyId,
-                            Name = item.Name,
-                            Level = item.Level,
-                            PlanetId = item.PlanetId,
-                            XpDropped = item.XpDropped
 
-                        };
-                        collection.Add(newBadGuyListItems);
-                    }
+                var badGuyEntity = ctx.BadGuys;
+
+                var badGuyListItems = new List<BadGuyListItems>();
+
+                foreach (var item in badGuyEntity)
+                {
+                    var projectListItem = new BadGuyListItems()
+                    {
+                        BadGuyId = item.BadGuyId,
+                        Name = item.Name,
+                        Level = item.Level,
+                        PlanetId = item.PlanetId,
+                        XpDropped = item.XpDropped
+                    };
+
+                    badGuyListItems.Add(projectListItem);
                 }
-                return collection;
+
+                return badGuyListItems;
+
             }
         }
 

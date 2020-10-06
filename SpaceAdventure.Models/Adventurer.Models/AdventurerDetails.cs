@@ -16,7 +16,7 @@ namespace SpaceAdventure.Models.Adventurer
         public int Health { get; set; }
         public int Damage { get; set; }
         public Species Class { get; set; }
-        //public stringg Weapon {get; set;}
+        public string Weapon {get; set;}
 
         //public bool IsInCombat { get; set; }
         [ForeignKey(nameof(PlanetId))]

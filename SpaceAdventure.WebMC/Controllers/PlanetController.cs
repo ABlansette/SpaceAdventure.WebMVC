@@ -122,5 +122,15 @@ namespace SpaceAdventure.MVC.Controllers
             return RedirectToAction("Index");
 
         }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            var svc = CreatePlanetService();
+            var model = svc.GetPlanets();
+            
+            return View(model);
+        }
+
     }
 }

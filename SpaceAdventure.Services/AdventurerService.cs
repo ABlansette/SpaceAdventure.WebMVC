@@ -38,28 +38,33 @@ namespace SpaceAdventure.Data
             }
         }
 
-        public IEnumerable<AdventurerListItem> GetAdventurers()
+        public List<AdventurerListItems> GetAdventurers()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
-                    ctx
-                        .Adventurers
-                        .Where(e => e.OwnerId == _userId)
-                        .Select(
-                            e =>
-                                new AdventurerListItem
-                                {
-                                    AdventurerId = e.AdventurerId,
-                                    Name = e.Name,
-                                    Level = e.Level,
-                                    Class = (SpaceAdventure.Models.Adventurer.Species)e.Class
-                                }
-                        );
 
-                return query.ToArray();
+                var adventurerEntity = ctx.Adventurers;
+
+                var adventurerListItems = new List<AdventurerListItems>();
+
+                foreach (var item in adventurerEntity)
+                {
+                    var projectListItem = new AdventurerListItems()
+                    {
+                        AdventurerId = item.AdventurerId,
+                        Name = item.Name,
+                        Class = (Models.Adventurer.Species)item.Class,
+                        Level = item.Level
+                    };
+
+                    adventurerListItems.Add(projectListItem);
+                }
+
+                return adventurerListItems;
+
             }
         }
+
         public AdventurerDetails GetAdventurerById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -76,8 +81,8 @@ namespace SpaceAdventure.Data
                          Health = entity.Health,
                          Damage = entity.Damage,
                          Level = entity.Level,
-                         PlanetId = entity.PlanetId
-                         //Weapon = entity.Weapon()
+                         PlanetId = entity.PlanetId,
+                         Weapon = entity.WeaponChoice()
                      };
             }
         }

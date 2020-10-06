@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Settings";
+}
+
+<h2>Edit Your Adventure</h2>
+
+<div class="Settings">
+    <div class="Ability">
+        <h1>Adventurer</h1>
+        <p><a href="../Adventurer/Create" class="btn btn-primary btn-lg">Create</a></p>
+        <p><a href="../Adventurer/List" class="btn btn-primary btn-lg">List</a></p>
+    </div>
+    <div class="Ability">
+        <h1>Bad Guys</h1>
+        <p><a href="../BadGuy/Create" class="btn btn-primary btn-lg">Create</a></p>
+        <p><a href="../BadGuy/List" class="btn btn-primary btn-lg">List</a></p>
+    </div>
+    <div class="Ability">
+        <h1>Planet</h1>
+        <p><a href="../Planet/Create" class="btn btn-primary btn-lg">Create</a></p>
+        <p><a href="../Planet/List" class="btn btn-primary btn-lg">List</a></p>
+    </div>
+</div>
+
+<style>
+    .Settings {
+        justify-content: center;
+        width: 80%;
+        height: 400px;
+        display: flex;
+        border-style: dashed;
+    }
+
+    .Ability{
+        flex: auto;
+    }
+
+    a {
+        background-color: red;
+    }
+</style>
+

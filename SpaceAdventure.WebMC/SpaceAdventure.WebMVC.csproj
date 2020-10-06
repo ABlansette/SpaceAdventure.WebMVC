@@ -247,12 +247,14 @@
     <Content Include="Views\BadGuy\Edit.cshtml" />
     <Content Include="Views\BadGuy\Delete.cshtml" />
     <Content Include="Views\Planet\Create.cshtml" />
-    <Content Include="Views\Planet\Details.cshtml" />
     <Content Include="Views\Planet\Edit.cshtml" />
     <Content Include="Views\Planet\Delete.cshtml" />
     <Content Include="Views\Home\Play.cshtml" />
-    <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Planet\List.cshtml" />
+    <Content Include="Views\Adventurer\List.cshtml" />
+    <Content Include="Views\BadGuy\List.cshtml" />
+    <Content Include="Views\Home\Settings.cshtml" />
+    <Content Include="Views\Adventurer\ChooseList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

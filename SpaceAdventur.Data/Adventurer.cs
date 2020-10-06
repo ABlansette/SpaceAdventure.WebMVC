@@ -19,6 +19,8 @@ namespace SpaceAdventure.Data
         public string Name { get; set; }
 
         public int Level { get; set; }
+
+        public string Weapon { get; set; }
         public int Health
         {
             get
@@ -34,7 +36,35 @@ namespace SpaceAdventure.Data
             }
         }
         public Species Class { get; set; }
-        public string Weapon { get; set; }
+        public string WeaponChoice()
+        {
+            if (Class == Species.GreenAlien)
+            {
+                return "Blaster";
+            }
+            if (Class == Species.SpaceArcher)
+            {
+                return "Space Bow";
+            }
+            if (Class == Species.SpaceBarbarian)
+            {
+                return "Space Axe";
+            }
+            if (Class == Species.SpaceKnight)
+            {
+                return "Space Sword";
+            }
+            if (Class == Species.SpaceMonk)
+            {
+                return "Space Fists";
+            }
+            if (Class == Species.SpaceWizard)
+            {
+                return "Space Wand";
+            }
+            return "Space Weapon";
+
+        }
 
         //public bool IsInCombat { get; set; }
 

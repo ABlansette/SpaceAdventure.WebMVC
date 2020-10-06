@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceAdventure.Models.Adventurer
 {
-    public class AdventurerListItem
+    public class AdventurerListItems
     {
         public int AdventurerId { get; set; }
         public string Name { get; set; }

@@ -23,8 +23,25 @@ namespace SpaceAdventure.WebMC.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+           
+           return View();
+        }
+
+        public ActionResult Settings()
+        {
+            ViewBag.Message = "Settings";
 
             return View();
         }
+        
+        public ActionResult Play()
+        {
+            ViewBag.Message = "Play";
+
+            return View();
+        }
+
+
+
     }
 }
