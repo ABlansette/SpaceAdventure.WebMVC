@@ -74,16 +74,16 @@ namespace SpaceAdventure.Data
                         .Adventurers
                         .Single(e => e.AdventurerId == id && e.OwnerId == _userId);
                 return
-                     new AdventurerDetails
-                     {
-                         AdventurerId = entity.AdventurerId,
-                         Name = entity.Name,
-                         Health = entity.Health,
-                         Damage = entity.Damage,
-                         Level = entity.Level,
-                         PlanetId = entity.PlanetId,
-                         Weapon = entity.WeaponChoice()
-                     };
+                    new AdventurerDetails
+                    {
+                        AdventurerId = entity.AdventurerId,
+                        Name = entity.Name,
+                        Health = entity.Health,
+                        Damage = entity.Damage,
+                        Level = entity.Level,
+                        PlanetId = entity.PlanetId,
+                        Weapon = entity.WeaponChoice()
+                    };
             }
         }
 

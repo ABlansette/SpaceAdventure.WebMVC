@@ -254,7 +254,7 @@
     <Content Include="Views\Adventurer\List.cshtml" />
     <Content Include="Views\BadGuy\List.cshtml" />
     <Content Include="Views\Home\Settings.cshtml" />
-    <Content Include="Views\Adventurer\ChooseList.cshtml" />
+    <Content Include="Views\Adventurer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

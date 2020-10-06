@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.PlanetId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", $"Edit/{item.BadGuyId}", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("View", $"Details/{item.BadGuyId}", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", $"Delete/{item.BadGuyId}", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

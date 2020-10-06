@@ -40,9 +40,7 @@
                 @Html.DisplayFor(modelItem => item.Class)
             </td>
             <td>
-                @Html.ActionLink("Edit Name", $"Edit{item.AdventurerId}", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("View Adventurer", $"Details{item.AdventurerId}", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", $"Delete{item.AdventurerId}", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Choose", "../Home/Play", new { /* id=item.PrimaryKey */ }) |
             </td>
         </tr>
     }

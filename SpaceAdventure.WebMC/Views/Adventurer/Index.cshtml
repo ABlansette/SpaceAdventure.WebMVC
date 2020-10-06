@@ -2,7 +2,7 @@
 
 
 @{
-    ViewBag.Title = "ChooseList";
+    ViewBag.Title = "Index";
 }
 
 <p>
@@ -19,9 +19,11 @@
         <th>
             @Html.DisplayNameFor(model => model.Level)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class)
+        </th>
         <th></th>
     </tr>
-
     @foreach (var item in Model)
     {
         <tr>
@@ -35,9 +37,15 @@
                 @Html.DisplayFor(modelItem => item.Level)
             </td>
             <td>
-                @Html.ActionLink("Choose", "../Home/Play", new { /* id=item.PrimaryKey */ }) |
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.ActionLink("Edit Name", $"Edit/{item.AdventurerId}", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("View Adventurer", $"Details/{item.AdventurerId}", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", $"Delete/{item.AdventurerId}", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
     }
+
 </table>
 @Html.ActionLink("Settings", "../Home/Settings")

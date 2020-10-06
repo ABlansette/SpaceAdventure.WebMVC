@@ -66,7 +66,7 @@ namespace SpaceAdventure.Services
                 var entity =
                     ctx
                         .BadGuys
-                        .Single(e => e.BadGuyId == id && _ownerId == e.UserId);
+                        .Single(e => e.BadGuyId == id);
                 return
                     new BadGuyDetails
                     {
@@ -76,7 +76,6 @@ namespace SpaceAdventure.Services
                         Damage = entity.Damage,
                         XpDropped = entity.XpDropped,
                         PlanetId = entity.PlanetId
-
                     };
             }
         }

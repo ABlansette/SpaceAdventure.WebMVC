@@ -10,18 +10,42 @@
 
     </div>
     <div class="linkies">
-        @Html.ActionLink("Create A", "../Adventurer/Create")
-        @Html.ActionLink("Edit A", "../Adventurer/Edit")
-        @Html.ActionLink("Delete A", "../Adventurer/Delete")
-        @Html.ActionLink("List A", "../Adventurer/List")
-        @Html.ActionLink("Create B", "../BadGuy/Create")
-        @Html.ActionLink("Edit B", "../BadGuy/Edit")
-        @Html.ActionLink("Delete B", "BadGuy/Delete")
-        @Html.ActionLink("List B", "../BadGuy/List")
-        @Html.ActionLink("Create P", "../Planet/Create")
-        @Html.ActionLink("Edit P", "../Planet/Edit")
-        @Html.ActionLink("Delete P", "../Planet/Delete")
-        @Html.ActionLink("List P", "../Planet/List")
+        <p>
+            @Html.ActionLink("Create A", "../Adventurer/Create")
+        </p>
+        <p>
+            @Html.ActionLink("Edit A", "../Adventurer/Edit")
+        </p>
+        <p>
+            @Html.ActionLink("Delete A", "../Adventurer/Delete")
+        </p>
+        <p>
+            @Html.ActionLink("List A", "../Adventurer/List")
+        </p>
+        <p>
+            @Html.ActionLink("Create B", "../BadGuy/Create")
+        </p>
+        <p>
+            @Html.ActionLink("Edit B", "../BadGuy/Edit")
+        </p>
+        <p>
+            @Html.ActionLink("Delete B", "BadGuy/Delete")
+        </p>
+        <p>
+            @Html.ActionLink("Create P", "../Planet/Create")
+        </p>
+        <p>
+            @Html.ActionLink("List B", "../BadGuy/List")
+        </p>
+        <p>
+            @Html.ActionLink("Edit P", "../Planet/Edit")
+        </p>
+        <p>
+            @Html.ActionLink("Delete P", "../Planet/Delete")
+        </p>
+        <p>
+            @Html.ActionLink("List P", "../Planet/List")
+        </p>
     </div>
 
     <div class="row">
@@ -33,7 +57,9 @@
         height: 500px;
         background-image: url("../Assets/Startup.kra");
         border-style: solid;
+        display: flex;
     }
+
     main {
         background-image: url("../Assets/Startup.kra");
     }
@@ -43,8 +69,12 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         background-color: white;
     }
-    p{
+
+    p {
         text-align: center;
+        padding: 30px 40px 30px 40px;
+        flex: auto;
+
     }
 
     .buttons {
@@ -59,7 +89,7 @@
         flex: 50%;
     }
 
-    btn{
+    btn {
         margin-right: 100px;
     }
 </style>
