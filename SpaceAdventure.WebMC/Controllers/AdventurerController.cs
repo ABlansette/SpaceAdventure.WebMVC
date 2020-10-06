@@ -21,7 +21,8 @@ namespace SpaceAdventure.MVC.Controllers
         // GET: Adventurer
         public ActionResult Index()
         {
-            var service = CreateAdventurerService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new AdventurerService(userId);
             var model = service.GetAdventurers();
 
             return View(model);

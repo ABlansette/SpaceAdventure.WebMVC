@@ -11,7 +11,6 @@ namespace SpaceAdventure.Models.Planet
     {
         //public int PlanetId { get; set; }
         [Required]
-        
         public string PlanetaryName { get; set; }
     }
 }

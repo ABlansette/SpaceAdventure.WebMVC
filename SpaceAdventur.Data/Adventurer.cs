@@ -68,7 +68,7 @@ namespace SpaceAdventure.Data
 
         //public bool IsInCombat { get; set; }
 
-        [ForeignKey("Planet")]
+        [ForeignKey(nameof(PlanetId))]
         public int PlanetId { get; set; }
         public virtual Planet Planet { get; set; }
     }

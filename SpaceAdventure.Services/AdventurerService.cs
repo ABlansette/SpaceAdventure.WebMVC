@@ -33,7 +33,6 @@ namespace SpaceAdventure.Data
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Adventurers.Add(entity);
-                
                 return ctx.SaveChanges() == 1;
             }
         }

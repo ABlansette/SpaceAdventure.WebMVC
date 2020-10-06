@@ -19,18 +19,15 @@ namespace SpaceAdventure.Services
 
         public bool PlanetCreate(PlanetCreate model)
         {
-            using (var ctx = new ApplicationDbContext())
+            var newPlanet = new Planet()
             {
-                var newPlanet = new Planet()
-                {
-                    PlanetaryName = model.PlanetaryName,
-                };
+                PlanetaryName = model.PlanetaryName,
+            };
 
-                using (var poo = new ApplicationDbContext())
-                {
-                    poo.Planets.Add(newPlanet);
-                    return poo.SaveChanges() == 1;
-                }
+            using (var poo = new ApplicationDbContext())
+            {
+                poo.Planets.Add(newPlanet);
+                return poo.SaveChanges() == 1;
             }
         }
 
