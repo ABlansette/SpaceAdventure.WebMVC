@@ -19,6 +19,7 @@ namespace SpaceAdventure.MVC.Controllers
             return service;
         }
         // GET: Adventurer
+        [HttpGet]
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
@@ -45,7 +46,7 @@ namespace SpaceAdventure.MVC.Controllers
             if (service.CreateAdventurer(model))
             {
                 TempData["SaveResult"] = "Your Adventurer was created.";
-                return RedirectToAction($"List");
+                return RedirectToAction($"Index");
             };
 
             ModelState.AddModelError("", "Note could not be created.");
@@ -94,30 +95,34 @@ namespace SpaceAdventure.MVC.Controllers
             if (service.UpdateAdventurer(model))
             {
                 TempData["SaveResult"] = "Your Adventurer was updated.";
-                return RedirectToAction("Details");
+                return RedirectToAction("Index");
             }
 
             ModelState.AddModelError("", "Your Adventurer was not updated");
             return View(model);
         }
-        [HttpGet]
-        
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateAdventurerService();
+            var model = svc.GetAdventurerById(id);
+
+            return View(model);
+        }
 
         [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public ActionResult DeleteAdventurer(int id)
         {
             var service = CreateAdventurerService();
 
-            if (service.DeleteAdventurer(id))
-            {
-                TempData["SaveResult"] = "Your Adventurer was deleted.";
-                return RedirectToAction("Index");
-            }
+            service.DeleteAdventurer(id);
 
-            TempData["SaveResult"] = "Your Adventurer was not deleted.";
+            TempData["SaveResult"] = "Your note was deleted";
+
             return RedirectToAction("Index");
-
         }
     }
 }

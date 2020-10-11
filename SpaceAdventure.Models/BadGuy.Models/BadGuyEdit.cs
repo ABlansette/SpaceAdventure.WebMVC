@@ -22,7 +22,7 @@ namespace SpaceAdventure.Models.BadGuy
         public int XpDropped { get; set; }
 
         [Required]
-        [ForeignKey(nameof(PlanetId))]
+        [ForeignKey(nameof(Planet))]
         public int PlanetId { get; set; }
     }
 }

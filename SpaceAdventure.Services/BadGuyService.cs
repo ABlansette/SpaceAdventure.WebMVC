@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SpaceAdventure.Models.Adventurer;
 
 namespace SpaceAdventure.Services
 {
@@ -23,7 +24,8 @@ namespace SpaceAdventure.Services
                 Name = model.Name,
                 Level = model.Level,
                 XpDropped = model.XpDropped,
-                PlanetId = model.PlanetId
+                PlanetId = model.PlanetId,
+                UserId = _ownerId
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -66,10 +68,11 @@ namespace SpaceAdventure.Services
                 var entity =
                     ctx
                         .BadGuys
-                        .Single(e => e.BadGuyId == id);
+                        .Single(e => e.BadGuyId == id && e.UserId == _ownerId);
                 return
                     new BadGuyDetails
                     {
+                        BadGuyId = entity.BadGuyId,
                         Name = entity.Name,
                         Level = entity.Level,
                         Health = entity.Health,
@@ -82,17 +85,18 @@ namespace SpaceAdventure.Services
 
         public bool UpdateBadGuy(BadGuyEdit model)
         {
-
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .BadGuys
-                        .Single(e => e.BadGuyId == model.BadGuyId && _ownerId == e.UserId);
+                        .Single(e => e.BadGuyId == model.BadGuyId && e.UserId == _ownerId);
+
                 entity.Name = model.Name;
                 entity.Level = model.Level;
-                entity.XpDropped = model.XpDropped;
                 entity.PlanetId = model.PlanetId;
+                entity.XpDropped = model.XpDropped;
+
                 return ctx.SaveChanges() == 1;
             }
         }

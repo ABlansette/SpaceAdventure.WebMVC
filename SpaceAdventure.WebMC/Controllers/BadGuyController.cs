@@ -11,6 +11,7 @@ namespace SpaceAdventure.MVC.Controllers
 {
     public class BadGuyController : Controller
     {
+
         public BadGuyService CreateBadGuyService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
@@ -70,27 +71,37 @@ namespace SpaceAdventure.MVC.Controllers
                 {
                     BadGuyId = detail.BadGuyId,
                     Name = detail.Name,
+                    Level = detail.Level,
+                    PlanetId = detail.PlanetId,
+                    XpDropped = detail.XpDropped
                 };
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(BadGuyEdit model)
+        public ActionResult Edit(int id, BadGuyEdit model)
         {
             if (!ModelState.IsValid) return View(model);
+
+            if (model.BadGuyId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
 
             var service = CreateBadGuyService();
 
             if (service.UpdateBadGuy(model))
             {
-                TempData["SaveResult"] = "Your Bad Guy was updated.";
-                return RedirectToAction("Index");
+                TempData["SaveResult"] = "Your note was updated.";
+                return RedirectToAction("List");
             }
 
-            ModelState.AddModelError("", "Your Bad Guy was not updated");
+            ModelState.AddModelError("", "Your note could not be updated.");
             return View(model);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

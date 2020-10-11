@@ -9,12 +9,10 @@ namespace SpaceAdventure.Data
 {
     public class Planet
     {
-        public Guid UserId { get; set; }
         [Key]
         public int PlanetId { get; set; }
 
-
-
+        public Guid UserId { get; set; }
         [Required]
         public string PlanetaryName { get; set; }
 

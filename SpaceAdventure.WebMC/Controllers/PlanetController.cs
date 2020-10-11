@@ -69,7 +69,6 @@ namespace SpaceAdventure.MVC.Controllers
             var model =
                 new PlanetEdit
                 {
-                    PlanetId = detail.PlanetId,
                     PlanetaryName = detail.PlanetaryName,
                 };
             return View(model);

@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdventurerController.cs" />
     <Compile Include="Controllers\BadGuyController.cs" />
+    <Compile Include="Controllers\FightController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlanetController.cs" />
@@ -203,6 +204,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Assets\wallpaperflare.com_wallpaper.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -255,9 +257,13 @@
     <Content Include="Views\BadGuy\List.cshtml" />
     <Content Include="Views\Home\Settings.cshtml" />
     <Content Include="Views\Adventurer\Index.cshtml" />
+    <Content Include="Views\Assets\Wizard.kra" />
+    <Content Include="Views\Assets\Barbarian.kra" />
+    <Content Include="Views\Stating\Fight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Fight\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,10 +1,5 @@
 ﻿@model IEnumerable<SpaceAdventure.Models.Adventurer.AdventurerListItems>
 
-
-@{
-    ViewBag.Title = "Index";
-}
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -19,33 +14,56 @@
         <th>
             @Html.DisplayNameFor(model => model.Level)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Class)
-        </th>
         <th></th>
     </tr>
+    @{
+        int i = 0;
+    }
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AdventurerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Level)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Class)
-            </td>
-            <td>
-                @Html.ActionLink("Edit Name", $"Edit/{item.AdventurerId}", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("View Adventurer", $"Details/{item.AdventurerId}", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", $"Delete/{item.AdventurerId}", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+        i++;
+        if (i % 2 == 0)
+        {
+            <tr style="background-color: rgb(132, 42, 173)","color: white;" >
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdventurerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AdventurerId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AdventurerId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AdventurerId })
+                </td>
+            </tr>
+        }
+        else
+        {
+            <tr style="background-color: rgb(132, 42, 242)","color: white;">
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdventurerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AdventurerId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AdventurerId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AdventurerId })
+                </td>
+            </tr>
+        }
     }
 
 </table>
+
 @Html.ActionLink("Settings", "../Home/Settings")

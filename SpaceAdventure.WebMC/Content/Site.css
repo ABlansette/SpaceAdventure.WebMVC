@@ -1,4 +1,6 @@
 ﻿body {
+    margin-right: 100px;
+    margin-Left: 100px;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -21,4 +23,54 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.socialLoginForm{
+    display: none;
+}
+
+.body-content{
+    justify-content: center;
+    border-style: solid;
+    margin-top: auto;
+}
+.form-horizantal {
+    padding-right: 0px;
+}
+
+
+.button{
+    margin: auto;
+}
+
+.row{
+    width: 600px;
+    height: 400px;
+}
+
+.container {
+    width: 650px;
+    margin-top: 100px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(202, 161, 255);
+}
+
+#socialLoginForm{
+    display: none;
+}
+
+.col-md-8
+{
+    width: 600px;
+}
+
+.form-horizontal{
+    width: 600px;
+}
+
+html {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Views/Assets/wallpaperflare.com_wallpaper.jpg);
 }

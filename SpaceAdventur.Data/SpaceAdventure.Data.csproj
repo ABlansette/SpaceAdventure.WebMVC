@@ -56,23 +56,11 @@
   <ItemGroup>
     <Compile Include="Adventurer.cs" />
     <Compile Include="BadGuy.cs" />
+    <Compile Include="Fight.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202010011404027_Initialmigration.cs" />
-    <Compile Include="Migrations\202010011404027_Initialmigration.Designer.cs">
-      <DependentUpon>202010011404027_Initialmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010011917439_Weapon.cs" />
-    <Compile Include="Migrations\202010011917439_Weapon.Designer.cs">
-      <DependentUpon>202010011917439_Weapon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010042038128_Views.cs" />
-    <Compile Include="Migrations\202010042038128_Views.Designer.cs">
-      <DependentUpon>202010042038128_Views.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010051752234_Settings\Play.cs" />
-    <Compile Include="Migrations\202010061933407_INdex.cs" />
-    <Compile Include="Migrations\202010061933407_INdex.Designer.cs">
-      <DependentUpon>202010061933407_INdex.cs</DependentUpon>
+    <Compile Include="Migrations\202010091443595_TheNewOne.cs" />
+    <Compile Include="Migrations\202010091443595_TheNewOne.Designer.cs">
+      <DependentUpon>202010091443595_TheNewOne.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Planet.cs" />
@@ -83,17 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010011404027_Initialmigration.resx">
-      <DependentUpon>202010011404027_Initialmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010011917439_Weapon.resx">
-      <DependentUpon>202010011917439_Weapon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010042038128_Views.resx">
-      <DependentUpon>202010042038128_Views.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010061933407_INdex.resx">
-      <DependentUpon>202010061933407_INdex.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010091443595_TheNewOne.resx">
+      <DependentUpon>202010091443595_TheNewOne.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

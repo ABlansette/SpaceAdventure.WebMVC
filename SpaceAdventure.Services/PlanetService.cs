@@ -22,6 +22,7 @@ namespace SpaceAdventure.Services
             var newPlanet = new Planet()
             {
                 PlanetaryName = model.PlanetaryName,
+                UserId = _ownerId
             };
 
             using (var poo = new ApplicationDbContext())
@@ -62,7 +63,6 @@ namespace SpaceAdventure.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                // Title, PlanetId, Description, CreatorName, CreatorUserName
                 var projectEntity =
                     ctx
                         .Planets

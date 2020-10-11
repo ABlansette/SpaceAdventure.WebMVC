@@ -7,13 +7,13 @@ namespace SpaceAdventur.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class Views : IMigrationMetadata
+    public sealed partial class TheNewOne : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Views));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(TheNewOne));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010042038128_Views"; }
+            get { return "202010091443595_TheNewOne"; }
         }
         
         string IMigrationMetadata.Source

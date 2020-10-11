@@ -27,7 +27,8 @@ namespace SpaceAdventure.Data
                     Name = model.Name,
                     Level = 1,
                     PlanetId = 1,
-                    Weapon = model.WeaponChoice()
+                    Weapon = model.WeaponChoice(),
+                    OwnerId = _userId
                 };
 
             using (var ctx = new ApplicationDbContext())

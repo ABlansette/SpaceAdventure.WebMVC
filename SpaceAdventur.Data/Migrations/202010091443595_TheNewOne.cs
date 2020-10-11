@@ -3,7 +3,7 @@ namespace SpaceAdventur.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initialmigration : DbMigration
+    public partial class TheNewOne : DbMigration
     {
         public override void Up()
         {
@@ -15,8 +15,7 @@ namespace SpaceAdventur.Data.Migrations
                         OwnerId = c.Guid(nullable: false),
                         Name = c.String(nullable: false),
                         Level = c.Int(nullable: false),
-                        Health = c.Int(nullable: false),
-                        Damage = c.Int(nullable: false),
+                        Weapon = c.String(),
                         Class = c.Int(nullable: false),
                         PlanetId = c.Int(nullable: false),
                     })

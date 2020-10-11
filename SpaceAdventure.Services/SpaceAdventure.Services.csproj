@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BadGuyService.cs" />
+    <Compile Include="FightService.cs" />
     <Compile Include="PlanetService.cs" />
     <Compile Include="AdventurerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

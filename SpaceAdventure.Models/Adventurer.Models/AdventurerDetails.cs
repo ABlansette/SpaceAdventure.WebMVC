@@ -19,7 +19,7 @@ namespace SpaceAdventure.Models.Adventurer
         public string Weapon {get; set;}
 
         //public bool IsInCombat { get; set; }
-        [ForeignKey(nameof(PlanetId))]
+        [ForeignKey(nameof(Planet))]
         public int PlanetId { get; set; }
     }
     public enum Species { SpaceWizard, SpaceKnight, GreenAlien, SpaceBarbarian, SpaceArcher, SpaceMonk }
