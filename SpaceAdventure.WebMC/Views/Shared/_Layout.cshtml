@@ -9,8 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body style="background-image:url(../../Views/Assets/wallpaperflare.com_wallpaper.jpg);">
-    <div class="fillitup">
+<body style="background-image:url(../../Assets/wallpaperflare.com_wallpaper.jpg);">
         <div class="container body-content">
             @RenderBody()
 
@@ -19,16 +18,12 @@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
-    </div>
 </body>
 
 </html>
 <style>
     html {
     }
-
-    .fillitup {
-        background-image: url("'../Assets/Screenshot (1).png'") !important;
-        margin: 0px;
+    body {
     }
 </style>

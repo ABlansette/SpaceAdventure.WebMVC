@@ -1,14 +1,18 @@
 ﻿body {
-    margin-right: 100px;
-    margin-Left: 100px;
     padding-top: 50px;
     padding-bottom: 20px;
+    padding-bottom: 300px;
+    background-image: url(../Assets/wallpaperflare.com_wallpaper.jpg);
+    justify-content:center;
+    height: 100%;
+    width: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    justify-content: center;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -53,7 +57,8 @@ textarea {
     margin-top: 100px;
     text-align: center;
     justify-content: center;
-    background-color: rgb(202, 161, 255);
+    background-color: rgb(255, 160, 255);
+    margin-left: auto;
 }
 
 #socialLoginForm{
@@ -74,4 +79,5 @@ html {
     background-size: cover;
     background-image: url("../Assets/wallpaperflare.com_wallpaper.jpg")!important;
     margin: 0;
+
 }

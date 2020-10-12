@@ -204,8 +204,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\Assets\Screenshot %281%29.png" />
-    <Content Include="Views\Assets\wallpaperflare.com_wallpaper.jpg" />
+    <Content Include="Assets\Screenshot %281%29.png" />
+    <Content Include="Assets\wallpaperflare.com_wallpaper.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -241,7 +241,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Adventurer\Create.cshtml" />
-    <Content Include="Views\Assets\Startup.kra" />
+    <Content Include="Assets\Startup.kra" />
     <Content Include="Views\Adventurer\Details.cshtml" />
     <Content Include="Views\Adventurer\Edit.cshtml" />
     <Content Include="Views\Adventurer\Delete.cshtml" />
@@ -258,8 +258,8 @@
     <Content Include="Views\BadGuy\List.cshtml" />
     <Content Include="Views\Home\Settings.cshtml" />
     <Content Include="Views\Adventurer\Index.cshtml" />
-    <Content Include="Views\Assets\Wizard.kra" />
-    <Content Include="Views\Assets\Barbarian.kra" />
+    <Content Include="Assets\Wizard.kra" />
+    <Content Include="Assets\Barbarian.kra" />
     <Content Include="Views\Fight\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
