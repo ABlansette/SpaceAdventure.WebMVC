@@ -204,6 +204,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Assets\Screenshot %281%29.png" />
     <Content Include="Views\Assets\wallpaperflare.com_wallpaper.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -259,11 +260,10 @@
     <Content Include="Views\Adventurer\Index.cshtml" />
     <Content Include="Views\Assets\Wizard.kra" />
     <Content Include="Views\Assets\Barbarian.kra" />
-    <Content Include="Views\Stating\Fight.cshtml" />
+    <Content Include="Views\Fight\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Fight\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

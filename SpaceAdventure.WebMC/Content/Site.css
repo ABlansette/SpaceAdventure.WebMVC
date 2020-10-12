@@ -72,5 +72,6 @@ textarea {
 html {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../Views/Assets/wallpaperflare.com_wallpaper.jpg);
+    background-image: url("../Assets/wallpaperflare.com_wallpaper.jpg")!important;
+    margin: 0;
 }

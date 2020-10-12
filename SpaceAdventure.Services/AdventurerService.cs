@@ -25,6 +25,7 @@ namespace SpaceAdventure.Data
                 {
                     //AdventurerId = _adventurerId,
                     Name = model.Name,
+                    Class = (Species)model.Class,
                     Level = 1,
                     PlanetId = 1,
                     Weapon = model.WeaponChoice(),
@@ -77,6 +78,7 @@ namespace SpaceAdventure.Data
                     new AdventurerDetails
                     {
                         AdventurerId = entity.AdventurerId,
+                        Class = (Models.Adventurer.Species)entity.Class,
                         Name = entity.Name,
                         Health = entity.Health,
                         Damage = entity.Damage,

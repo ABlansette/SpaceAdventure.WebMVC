@@ -24,26 +24,54 @@
         </th>
         <th></th>
     </tr>
+    @{
+        int i = 0;
+    }
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AdventurerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Level)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Class)
-            </td>
-            <td>
-                @Html.ActionLink("Choose", "../Home/Play", new { /* id=item.PrimaryKey */ }) |
-            </td>
-        </tr>
+        i++;
+        if (i % 2 == 0)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdventurerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.ActionLink("Choose", "../Home/Play", new { /* id=item.PrimaryKey */ }) |
+                </td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdventurerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.ActionLink("Choose", "../Home/Play", new { /* id=item.PrimaryKey */ }) |
+                </td>
+            </tr>
+        }
     }
 
-</table>
+
+    </table>
 @Html.ActionLink("Play", "../Home/Play")
