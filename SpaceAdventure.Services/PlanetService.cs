@@ -63,17 +63,17 @@ namespace SpaceAdventure.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var projectEntity =
+                var entity =
                     ctx
                         .Planets
-                        .Single(e => e.PlanetId == id && _ownerId == e.UserId);
-
-                return new PlanetDetails
-                {
-                    PlanetaryName = projectEntity.PlanetaryName,
-                    PlanetId = projectEntity.PlanetId,
-                    NumOfBadGuys = projectEntity.NumOfBadGuys,
-                };
+                        .Single(e => e.PlanetId == id && e.UserId == _ownerId);
+                return
+                    new PlanetDetails
+                    {
+                        NumOfBadGuys = entity.NumOfBadGuys,
+                        PlanetaryName = entity.PlanetaryName,
+                        PlanetId = entity.PlanetId,
+                    };
             }
         }
 

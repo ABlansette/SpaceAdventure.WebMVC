@@ -16,6 +16,27 @@ namespace SpaceAdventure.Data
         [Required]
         public string PlanetaryName { get; set; }
 
-        public int NumOfBadGuys { get; set; }
+        public int NumOfBadGuys
+        {
+            get
+            {
+                return HowManyBaddies();
+            }
+        }
+
+        public int HowManyBaddies()
+        {
+            var ctx = new ApplicationDbContext();
+            List<BadGuy> badGuys = new List<BadGuy>(ctx.BadGuys);
+            int count = 0;
+            foreach (var badguy in badGuys)
+            {
+                if(badguy.PlanetId == this.PlanetId)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
     }
 }
